@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'cargo'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    cargo 'org.wildfly:wildfly-controller-client:8.1.0.Final'
+    cargo 'org.codehaus.cargo:cargo-ant:1.4.8'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-cargo-plugin:1.5'
+    }
+}
+
+//see https://github.com/bmuschko/gradle-cargo-plugin
+cargo {
+    containerId = 'wildfly8x'
+    port = 9990
+
+    deployable {
+        context = 'my'
+    }
+
+    remote {
+        hostname = '172.17.0.5'
+        username = 'admin'
+        password = 'qwerty1!'
+    }
+
+}

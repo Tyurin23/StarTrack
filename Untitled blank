@@ -1,0 +1,63 @@
+#StarTrack
+Баг-трекинговая система.
+
+##Задачи
+0. Составление ТЗ
+0. Проектирование
+0. Реализация
+0. Тестирование
+0. Релиз
+
+###ТЗ
+
+#### USE CASE
+
+##### Roles
+- Anonymous
+- User
+- Project owner
+- Bug creator
+- Bug assignee
+- Contributor
+
+
+####Фитчи
+- Пользователи
+  * Авторизация
+  * Аутентификация
+  * Регистрация
+  * Просмотр
+  * ЛС
+  * Редактирование
+- Проекты
+  * Добавление
+  * Удаление
+  * Редактирование
+  * Просмотр
+- Баги
+  * Добавление
+  * Изменение
+  * Удаление
+- Поиск
+- Оповещения по почте
+
+
+#### UI
+- Main
+
+- Registration
+- Edit user
+- Users
+- User view
+- Authorization
+
+- Projects
+- Project
+- Create/Edit Project
+
+- Bugs
+- Create/Edit bug
+- Bug
+
+- Search results
+- Advanced search

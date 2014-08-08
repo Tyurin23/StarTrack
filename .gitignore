@@ -1,0 +1,8 @@
+.gradle
+.idea
+
+StarTrack/build
+
+
+*.iml
+*.class
