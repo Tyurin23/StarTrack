@@ -34,13 +34,15 @@ cargo {
     port = 9990
 
     deployable {
-        context = 'my'
+        context = deployContext
     }
 
     remote {
-        hostname = '172.17.0.5'
-        username = 'admin'
-        password = 'qwerty1!'
+        hostname = deployHostname
+        username = deployUsername
+        password = deployPassword
     }
 
 }
+
+cargoRedeployRemote.dependsOn build

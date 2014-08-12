@@ -15,6 +15,8 @@ public class MainController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String[] text = new String[]{"Hello", "World", "!"};
+        req.setAttribute("values", text);
         getServletContext().getRequestDispatcher("/WEB-INF/view/index.jsp").forward(req, resp);
     }
 }
